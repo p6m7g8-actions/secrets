@@ -1,8 +1,7 @@
-# p6m7g8-actions/p6df-yamllint
+# p6m7g8-actions/p6df-secrets
 
-- [p6m7g8-actions/p6df-yamllint](#p6m7g8-actionsp6df-yamllint)
+- [p6m7g8-actions/p6df-secrets](#p6m7g8-actionsp6df-secrets)
   - [Usage](#usage)
-  - [Doodle](#doodle)
 
 ## Usage
 
@@ -10,5 +9,3 @@
       - name: Build
         uses: p6m7g8-actions/secrets@main
 ```
-
-## Doodle
