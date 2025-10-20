@@ -2,6 +2,12 @@ name: "P6 GHA: Secrets"
 description: "P6 GHA: Secrets"
 author: "Philip M. Gollucci"
 
+inputs:
+  secrets:
+    description: "Run detect-secrets to scan for secrets in the codebase."
+    required: false
+    default: "true"
+
 runs:
   using: "composite"
   steps:
@@ -9,14 +15,17 @@ runs:
       uses: actions/checkout@v5.0.0
 
     - name: Set up Python 3.14.0
+      if: ${{ inputs.secrets == 'true' }}
       uses: actions/setup-python@v6.0.0
       with:
         python-version: 3.14.0
 
     - name: Install detect-secrets
+      if: ${{ inputs.secrets == 'true' }}
       shell: bash
       run: pip install detect-secrets
 
     - name: Check for Secrets
+      if: ${{ inputs.secrets == 'true' }}
       shell: bash
       run: detect-secrets-hook
