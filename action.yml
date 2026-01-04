@@ -11,9 +11,6 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Checkout code
-      uses: actions/checkout@v5.0.0
-
     - name: Set up Python 3.14.0
       if: ${{ inputs.secrets == 'true' }}
       uses: actions/setup-python@v6.0.0
