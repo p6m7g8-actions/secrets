@@ -9,4 +9,3 @@
       - name: Build
         uses: p6m7g8-actions/secrets@main
 ```
-
